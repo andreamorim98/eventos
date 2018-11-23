@@ -3,6 +3,7 @@
 	$this->assign('nav','eventos');
 
 	$this->display('_Header.tpl.php');
+
 ?>
 
 <script type="text/javascript">
@@ -69,7 +70,7 @@
 				<div id="descricaoInputContainer" class="control-group">
 					<label class="control-label" for="descricao">Descrição</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="descricao" placeholder="Descricao" value="<%= _.escape(item.get('descricao') || '') %>">
+						<input type="text" class="input-xlarge" id="descricao" placeholder="Descrição" value="<%= _.escape(item.get('descricao') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
@@ -78,16 +79,19 @@
 					<div class="controls inline-inputs">
 						<input type="text" class="input-xlarge" id="organizador" placeholder="Organizador" value="<%= _.escape(item.get('organizador') || '') %>">
 						<span class="help-inline"></span>
+<!---->
+<!--                        <select>-->
+<!--                            --><?php
+//                            $sql = $pdo->prepare("SELECT * FROM organizador");
+//                            $sql->execute();
+//                            while($ln = $sql->fetchObject()){
+//                                echo '<option value="'.$ln->id.'">'.$ln->nome.'</option>';
+//                            }
+//                            ?>
+<!--                        </select>-->
 					</div>
 
-<!--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">-->
-<!--                        --><?php
-//                        foreach ($organizador->fetchAll() as $res):
-//                        echo  '<li><a href="">'.$res['nome'].'</a></li>'
-//                        ?>
-<!--                        <a class="dropdown-item" href="#">Action</a>-->
-<!--                        ?>-->
-<!--                    </div>-->
+
 
 				</div>
 				<div id="dataeventoInputContainer" class="control-group">
